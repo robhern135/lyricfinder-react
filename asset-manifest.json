@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lyricfinder-react/static/css/main.36497136.chunk.css",
+    "main.js": "/lyricfinder-react/static/js/main.22b76602.chunk.js",
+    "main.js.map": "/lyricfinder-react/static/js/main.22b76602.chunk.js.map",
+    "runtime-main.js": "/lyricfinder-react/static/js/runtime-main.2d102d27.js",
+    "runtime-main.js.map": "/lyricfinder-react/static/js/runtime-main.2d102d27.js.map",
+    "static/js/2.278991bc.chunk.js": "/lyricfinder-react/static/js/2.278991bc.chunk.js",
+    "static/js/2.278991bc.chunk.js.map": "/lyricfinder-react/static/js/2.278991bc.chunk.js.map",
+    "index.html": "/lyricfinder-react/index.html",
+    "precache-manifest.19e6e5dcaf72f3519f3827a26398ea50.js": "/lyricfinder-react/precache-manifest.19e6e5dcaf72f3519f3827a26398ea50.js",
+    "service-worker.js": "/lyricfinder-react/service-worker.js",
+    "static/css/main.36497136.chunk.css.map": "/lyricfinder-react/static/css/main.36497136.chunk.css.map",
+    "static/js/2.278991bc.chunk.js.LICENSE.txt": "/lyricfinder-react/static/js/2.278991bc.chunk.js.LICENSE.txt",
+    "static/media/spinner.gif": "/lyricfinder-react/static/media/spinner.235b9b3e.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d102d27.js",
+    "static/js/2.278991bc.chunk.js",
+    "static/css/main.36497136.chunk.css",
+    "static/js/main.22b76602.chunk.js"
+  ]
+}
