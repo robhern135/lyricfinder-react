@@ -15,7 +15,7 @@ class Lyrics extends Component {
       .get(
         // https://cors-anywhere.herokuapp.com/
         //this.props.match.params.id - gets ID from url
-        `/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       //response is always res.data when using axios
       .then((res) => {
@@ -24,7 +24,7 @@ class Lyrics extends Component {
         return axios.get(
           // https://cors-anywhere.herokuapp.com/
           //this.props.match.params.id - gets ID from url
-          `/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
         );
       })
       .then((res) => {
