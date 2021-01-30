@@ -1,6 +1,6 @@
 {
   "homepage": "http://robhern135.github.io/lyricfinder-react",
-  "name": "lyricfinder_react",
+  "name": "lyricfinder-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
