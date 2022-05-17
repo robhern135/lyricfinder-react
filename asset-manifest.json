@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/lyricfinder-react/static/css/main.36497136.chunk.css",
-    "main.js": "/lyricfinder-react/static/js/main.9c0de876.chunk.js",
-    "main.js.map": "/lyricfinder-react/static/js/main.9c0de876.chunk.js.map",
+    "main.js": "/lyricfinder-react/static/js/main.870f3d6d.chunk.js",
+    "main.js.map": "/lyricfinder-react/static/js/main.870f3d6d.chunk.js.map",
     "runtime-main.js": "/lyricfinder-react/static/js/runtime-main.dae41a93.js",
     "runtime-main.js.map": "/lyricfinder-react/static/js/runtime-main.dae41a93.js.map",
-    "static/js/2.13ac4079.chunk.js": "/lyricfinder-react/static/js/2.13ac4079.chunk.js",
-    "static/js/2.13ac4079.chunk.js.map": "/lyricfinder-react/static/js/2.13ac4079.chunk.js.map",
+    "static/js/2.e04e4c93.chunk.js": "/lyricfinder-react/static/js/2.e04e4c93.chunk.js",
+    "static/js/2.e04e4c93.chunk.js.map": "/lyricfinder-react/static/js/2.e04e4c93.chunk.js.map",
     "index.html": "/lyricfinder-react/index.html",
-    "precache-manifest.f2657ca68132c50cd74de84d6bf30d8e.js": "/lyricfinder-react/precache-manifest.f2657ca68132c50cd74de84d6bf30d8e.js",
+    "precache-manifest.e942042c2956302cc6eab7c960f9d5f0.js": "/lyricfinder-react/precache-manifest.e942042c2956302cc6eab7c960f9d5f0.js",
     "service-worker.js": "/lyricfinder-react/service-worker.js",
     "static/css/main.36497136.chunk.css.map": "/lyricfinder-react/static/css/main.36497136.chunk.css.map",
-    "static/js/2.13ac4079.chunk.js.LICENSE.txt": "/lyricfinder-react/static/js/2.13ac4079.chunk.js.LICENSE.txt",
+    "static/js/2.e04e4c93.chunk.js.LICENSE.txt": "/lyricfinder-react/static/js/2.e04e4c93.chunk.js.LICENSE.txt",
     "static/media/spinner.gif": "/lyricfinder-react/static/media/spinner.235b9b3e.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.dae41a93.js",
-    "static/js/2.13ac4079.chunk.js",
+    "static/js/2.e04e4c93.chunk.js",
     "static/css/main.36497136.chunk.css",
-    "static/js/main.9c0de876.chunk.js"
+    "static/js/main.870f3d6d.chunk.js"
   ]
 }
