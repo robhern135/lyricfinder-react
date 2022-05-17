@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from "react"
+import axios from "axios"
 
-const Context = React.createContext();
+const Context = React.createContext()
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -10,30 +10,29 @@ const reducer = (state, action) => {
         ...state,
         track_list: action.payload,
         heading: "Search Results",
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
 export class Provider extends Component {
   state = {
     heading: "Top 10 tracks",
     track_list: [],
     dispatch: (action) => this.setState((state) => reducer(state, action)),
-  };
+  }
 
   componentDidMount() {
     axios
       .get(
-        // https://cors-anywhere.herokuapp.com/
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10country=uk&if_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10country=uk&if_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       //response is always res.data when using axios
       .then((res) => {
-        this.setState({ track_list: res.data.message.body.track_list });
+        this.setState({ track_list: res.data.message.body.track_list })
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }
 
   render() {
@@ -41,8 +40,8 @@ export class Provider extends Component {
       <Context.Provider value={this.state}>
         {this.props.children}
       </Context.Provider>
-    );
+    )
   }
 }
 
-export const Consumer = Context.Consumer;
+export const Consumer = Context.Consumer

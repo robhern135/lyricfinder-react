@@ -1,47 +1,45 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from "react"
+import axios from "axios"
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-import Spinner from "../layout/Spinner";
+import Spinner from "../layout/Spinner"
 
 class Lyrics extends Component {
   state = {
     track: {},
     lyrics: {},
-  };
+  }
   componentDidMount() {
     axios
       .get(
-        // https://cors-anywhere.herokuapp.com/
         //this.props.match.params.id - gets ID from url
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       //response is always res.data when using axios
       .then((res) => {
-        this.setState({ lyrics: res.data.message.body.lyrics });
+        this.setState({ lyrics: res.data.message.body.lyrics })
 
         return axios.get(
-          // https://cors-anywhere.herokuapp.com/
           //this.props.match.params.id - gets ID from url
-          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
-        );
+          `https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+        )
       })
       .then((res) => {
-        this.setState({ track: res.data.message.body.track });
+        this.setState({ track: res.data.message.body.track })
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }
 
   render() {
-    const { track, lyrics } = this.state;
+    const { track, lyrics } = this.state
     if (
       track === undefined ||
       lyrics === undefined ||
       Object.keys(track).length === 0 ||
       Object.keys(lyrics).length === 0
     ) {
-      return <Spinner />;
+      return <Spinner />
     } else {
       return (
         <React.Fragment>
@@ -74,9 +72,9 @@ class Lyrics extends Component {
             </li>
           </ul>
         </React.Fragment>
-      );
+      )
     }
   }
 }
 
-export default Lyrics;
+export default Lyrics

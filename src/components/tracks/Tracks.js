@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { Consumer } from "../../context";
-import Spinner from "../layout/Spinner";
-import Track from "./Track";
+import React, { Component } from "react"
+import { Consumer } from "../../context"
+import Spinner from "../layout/Spinner"
+import Track from "./Track"
 class Tracks extends Component {
   render() {
     return (
       <Consumer>
         {(value) => {
-          console.log(value);
-          const { track_list, heading } = value;
+          console.log(value)
+          const { track_list, heading } = value
           if (track_list === undefined || track_list.length === 0) {
-            return <Spinner />;
+            return <Spinner />
           } else {
             return (
               <React.Fragment>
@@ -21,12 +21,12 @@ class Tracks extends Component {
                   ))}
                 </div>
               </React.Fragment>
-            );
+            )
           }
         }}
       </Consumer>
-    );
+    )
   }
 }
 
-export default Tracks;
+export default Tracks

@@ -1,40 +1,39 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from "react"
+import axios from "axios"
 
-import { Consumer } from "../../context";
+import { Consumer } from "../../context"
 
 class Search extends Component {
   state = {
     trackTitle: "",
-  };
+  }
 
   onChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+    this.setState({ [e.target.name]: e.target.value })
+  }
 
   findTrack = (dispatch, e) => {
-    e.preventDefault();
+    e.preventDefault()
     axios
       .get(
-        // https://cors-anywhere.herokuapp.com/
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       //response is always res.data when using axios
       .then((res) => {
         dispatch({
           type: "SEARCH_TRACKS",
           payload: res.data.message.body.track_list,
-        });
-        this.setState({ trackTitle: "" });
+        })
+        this.setState({ trackTitle: "" })
       })
 
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
   render() {
     return (
       <Consumer>
         {(value) => {
-          const { dispatch } = value;
+          const { dispatch } = value
           return (
             <div className="card card-body mb-4 p-4">
               <h1 className="display-4 text-center">
@@ -60,10 +59,10 @@ class Search extends Component {
                 </button>
               </form>
             </div>
-          );
+          )
         }}
       </Consumer>
-    );
+    )
   }
 }
-export default Search;
+export default Search
